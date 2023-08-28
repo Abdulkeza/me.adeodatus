@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/unicredit_magazine" mode="merge"/>
+    <filter root="/content/unicredit_magazine" mode="merge"/>
+    <filter root="/content/dam/unicredit_magazine/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/unicredit_magazine" mode="merge"/>
+</workspaceFilter>

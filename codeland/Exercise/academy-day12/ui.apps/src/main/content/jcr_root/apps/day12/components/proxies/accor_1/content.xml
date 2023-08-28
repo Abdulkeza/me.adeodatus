@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          jcr:primaryType="cq:Component"
+          sling:resourceSuperType="core/wcm/components/accordion/v1/accordion"
+          componentGroup="Custom comp - Content">
+    <items
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+
+        
+        <title
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+            fieldLabel="Accordion Title"
+            name="./title"
+            value="custom accordion"
+            required="{Boolean}true"/>
+
+       
+        <description
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+            fieldLabel="Accordion Description"
+            name="./description"
+            value="ythis is my custom accordion"
+            rows="{Long}3"/>
+        
+       
+        <icon
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+            fieldLabel="Accordion Icon"
+            name="./icon"
+            rootPath="/content/dam/myapp/icons"
+            predicate="asset"
+            fileReferenceAttribute="fileReference"/>
+
+       
+
+    </items>
+</jcr:root>

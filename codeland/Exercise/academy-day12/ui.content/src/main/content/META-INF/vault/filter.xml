@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/day12" mode="merge"/>
+    <filter root="/content/day12" mode="merge"/>
+    <filter root="/content/dam/day12/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/day12" mode="merge"/>
+</workspaceFilter>

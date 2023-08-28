@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>${pageProperties.jcr:title}</title>
+    <sly
+      data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+      data-sly-call="${clientlib.all @ categories=['day12-clientlib.extlibs']}"
+    />
+  </head>
+  <body>
+    <div
+      data-sly-resource="${'heroSlider' @resourceType='day12/components/hero-slider'}"
+    ></div>
+
+    <div class="container">
+      <sly
+        data-sly-include="/libs/wcm/core/components/init/init.jsp"
+        data-sly-unwrap
+      />
+      <div
+        data-sly-resource="${'content' @resourceType='wcm/foundation/components/parsys'}"
+      ></div>
+    </div>
+    <br />
+    <br />
+
+    <!--/* <div data-sly-resource="${'footer' @resourceType='academy-ex2/components/contents/footer'}"></div> */-->
+  </body>
+</html>
