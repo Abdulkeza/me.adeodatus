@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    cq:adobeTargetExportFormat="html"
+    cq:allowedTemplates="[/conf/Adaptive-Forms/settings/wcm/templates/(?!page-).*]"
+    cq:conf="/conf/Adaptive-Forms"
+    jcr:primaryType="sling:OrderedFolder"
+    jcr:title="Adaptive_Forms_WKND Fragments"
+    sling:configRef="/conf/Adaptive-Forms">
+    <us/>
+</jcr:root>

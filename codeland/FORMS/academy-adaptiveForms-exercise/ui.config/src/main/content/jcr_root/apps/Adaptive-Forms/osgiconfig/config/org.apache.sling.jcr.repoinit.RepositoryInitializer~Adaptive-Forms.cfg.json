@@ -1,0 +1,7 @@
+{
+    "scripts": [
+        "create path (sling:OrderedFolder) /content/dam/Adaptive-Forms",
+        "create path (nt:unstructured) /content/dam/Adaptive-Forms/jcr:content",
+        "set properties on /content/dam/Adaptive-Forms/jcr:content\n  set cq:conf{String} to /conf/Adaptive-Forms\n  set jcr:title{String} to \"Adaptive_Forms_WKND\"\nend"
+    ]
+}
