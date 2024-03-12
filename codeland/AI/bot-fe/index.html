@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Bot FE</title>
+</head>
+<body>
+    <div id="df-root"></div>
+    <style>
+        /* Custom styles for the chatbot */
+        .df-messenger {
+            z-index: 999;
+            position: fixed;
+            bottom: 16px;
+            right: 16px;
+            font-family: Arial, sans-serif; 
+            width: 50%;
+        }
+
+        /* Custom styles for the title bar */
+        .df-messenger-titlebar {
+            background-color: #0b57d0; 
+            padding: 10px 15px; 
+            font-weight: bold; 
+            color: white; 
+            font-size: 20px; 
+        }
+
+        /* Custom styles for the chat window */
+        .df-messenger-chat-bubble {
+            background-color: #fafafa; 
+            padding: 0px; 
+            width: 100% !important;
+        }
+
+        .typing-indicator {
+            color: #808080; 
+            font-style: italic; 
+        }
+        bot-messa{
+            width: 10px !important;
+        }
+        .message {
+            width: 10px !important;
+        }
+    </style>
+
+   
+    <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+    <script>
+        // Initialize Dialogflow Messenger
+        window.addEventListener('DOMContentLoaded', function () {
+            var dfMessenger = document.createElement('df-messenger');
+            dfMessenger.setAttribute('project-id', 'aemcorner');
+            dfMessenger.setAttribute('agent-id', '3a869caf-661d-4765-a0f7-3ddf659fc5bc');
+            dfMessenger.setAttribute('language-code', 'en');
+            dfMessenger.setAttribute('max-query-length', '-1');
+
+            //custom chat title
+            dfMessenger.setAttribute('chat-title', 'Calorine');
+           dfMessenger.setAttribute('storage-option', 'none');
+
+           dfMessenger.setAttribute('allow-fullscreen', 'small');
+            dfMessenger.setAttribute('chat-collapse-icon', 'https://res.cloudinary.com/keza/image/upload/v1710238250/codeland-logo/back_oqyccr.png');
+            dfMessenger.setAttribute('chat-close-icon', 'https://res.cloudinary.com/keza/image/upload/v1710238571/codeland-logo/close_chhyda.png');
+
+            document.getElementById('df-root').appendChild(dfMessenger);
+        });
+
+        // Simulate typing indicator
+        function simulateTypingIndicator() {
+            var typingIndicator = document.createElement('div');
+            typingIndicator.classList.add('typing-indicator');
+            typingIndicator.textContent = 'Typing...';
+            document.querySelector('.df-messenger-chat-bubble').appendChild(typingIndicator);
+
+            setTimeout(function () {
+                typingIndicator.remove();
+            }, 2000); 
+        }
+
+        setTimeout(simulateTypingIndicator, 2000); // Simulate typing after some seconds
+    </script>
+</body>
+</html>
