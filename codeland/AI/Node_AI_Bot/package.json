@@ -1,0 +1,17 @@
+{
+  "name": "node_ai_bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "chatbot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/aiplatform": "^3.15.0",
+    "env": "^0.0.2",
+    "google-auth-library": "^9.7.0"
+  }
+}

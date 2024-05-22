@@ -1,0 +1,4 @@
+https://console.cloud.google.com/vertex-ai/generative/language/create/chat?project=aemcorner
+
+https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/gemini#chat
+https://cloud.google.com/vertex-ai/generative-ai/docs/start/quickstarts/quickstart-text#generative-ai-test-text-prompt-java
