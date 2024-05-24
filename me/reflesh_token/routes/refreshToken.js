@@ -17,7 +17,7 @@ router.post("/", async (req, res) => {
     verifyRefreshToken(req.body.refreshToken)
         .then(({ tokenDetails }) => {
             const payload = { _id: tokenDetails._id, roles: tokenDetails.roles };
-            console.log("+*********", payload);
+
             const accessToken = jwt.sign(
                 payload,
                 process.env.ACCESS_TOKEN_PRIVATE_KEY,
@@ -50,7 +50,6 @@ router.delete("/", async (req, res) => {
         await userToken.remove();
         res.status(200).json({ error: false, message: "Logged Out Sucessfully" });
     } catch (err) {
-        console.log(err);
         res.status(500).json({ error: true, message: "Internal Server Error" });
     }
 });
