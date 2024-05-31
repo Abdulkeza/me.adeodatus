@@ -29,9 +29,7 @@ router.post("/signUp", async (req, res) => {
 
         await new User({ ...req.body, password: hashPassword }).save();
 
-        res
-            .status(201)
-            .json({ error: false, message: "Account created sucessfully" });
+        res.status(201).json({ error: false, message: "Account created sucessfully" });
     } catch (err) {
         res.status(500).json({ error: true, message: "Internal Server Error" });
     }

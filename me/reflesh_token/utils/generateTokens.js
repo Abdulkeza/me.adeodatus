@@ -12,7 +12,7 @@ const generateTokens = async (user) => {
         const refreshToken = jwt.sign(
             payload,
             process.env.REFRESH_TOKEN_PRIVATE_KEY,
-            { expiresIn: "30d" }
+            { expiresIn: "10d" }
         );
 
         const userToken = await UserToken.findOne({ userId: user._id });

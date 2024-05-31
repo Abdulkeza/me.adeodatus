@@ -37,9 +37,7 @@ router.delete("/", async (req, res) => {
     try {
         const { error } = refreshTokenBodyValidation(req.body);
         if (error)
-            return res
-                .status(400)
-                .json({ error: true, message: error.details[0].message });
+            return res.status(400).json({ error: true, message: error.details[0].message });
 
         const userToken = await UserToken.findOne({ token: req.body.refreshToken });
         if (!userToken)
