@@ -9,7 +9,6 @@ import {
 
 const router = Router();
 
-// signup
 router.post("/signUp", async (req, res) => {
     try {
         const { error } = signUpBodyValidation(req.body);
