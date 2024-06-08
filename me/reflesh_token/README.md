@@ -1,0 +1,1 @@
+Apply this kind of implementation in Accreditation and Rw booking platforms
