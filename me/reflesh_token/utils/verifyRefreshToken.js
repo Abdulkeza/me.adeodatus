@@ -1,6 +1,7 @@
-import UserToken from "../models/UserToken.js";
 import jwt from "jsonwebtoken";
 import "dotenv/config"
+
+import UserToken from "../models/UserToken.js";
 
 const verifyRefreshToken = (refreshToken) => {
     const privateKey = process.env.REFRESH_TOKEN_PRIVATE_KEY;

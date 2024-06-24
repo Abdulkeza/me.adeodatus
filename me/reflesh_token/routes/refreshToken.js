@@ -1,6 +1,7 @@
 import { Router } from "express";
-import UserToken from "../models/UserToken.js";
 import jwt from "jsonwebtoken";
+
+import UserToken from "../models/UserToken.js";
 import { refreshTokenBodyValidation } from "../utils/validationSchema.js";
 import verifyRefreshToken from "../utils/verifyRefreshToken.js";
 
