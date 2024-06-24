@@ -1,6 +1,7 @@
 import { Router } from "express";
-import User from "../models/User.js";
 import bcrypt from "bcrypt";
+
+import User from "../models/User.js";
 import generateTokens from "../utils/generateTokens.js";
 import {
     signUpBodyValidation,
@@ -26,11 +27,11 @@ router.post("/signUp", async (req, res) => {
         const salt = await bcrypt.genSalt(Number(process.env.SALT));
         const hashPassword = await bcrypt.hash(req.body.password, salt);
 
-        await new User({ ...req.body, password: hashPassword }).save();
+       const newUser =  await new User({ ...req.body, password: hashPassword }).save();
 
-        res.status(201).json({ error: false, message: "Account created sucessfully" });
+       return res.status(201).json({ error: false, user: newUser, message: "Account created sucessfully" });
     } catch (err) {
-        res.status(500).json({ error: true, message: "Internal Server Error" });
+        return res.status(500).json({ error: true, message: "Internal Server Error" });
     }
 });
 
@@ -60,14 +61,14 @@ router.post("/logIn", async (req, res) => {
 
         const { accessToken, refreshToken } = await generateTokens(user);
 
-        res.status(200).json({
+         return res.status(200).json({
             error: false,
             accessToken,
             refreshToken,
             message: "Logged in sucessfully",
         });
     } catch (err) {
-        res.status(500).json({ error: true, message: "Internal Server Error" });
+      return  res.status(500).json({ error: true, message: "Internal Server Error" });
     }
 });
 
