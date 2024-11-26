@@ -1,0 +1,38 @@
+<!--/*
+  ~ Asset Share Commons
+  ~
+  ~ Copyright [2017]  Adobe
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+ */-->
+
+ <p data-sly-test="${wcmmode.edit}" class="edit-cmp-small"> CONFIGURE ASC VISUAL SEARCH RESULTS CMP</p>
+ <div class="extended-results">
+    <!-- original results -->
+     <div id="results-content">
+        <sly data-sly-resource="${@path='search-results', resourceType='asset-share-commons/components/search/results'}" />
+     </div>
+
+    <!-- section for similar images -->
+<section class="similar-images-section">
+    <div id="searched-image-container"></div>
+    <h2>Similar Images</h2>
+    <div id="loading-indicator" style="display:none;">
+        <p>Loading similar images...</p>
+    </div>
+    
+    <div id="similar-images-container" class="ui cards cmp-cards">
+        <!-- Similar images here -->
+    </div>
+</section>
+</div>

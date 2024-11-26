@@ -1,0 +1,9 @@
+{
+    "root_dam_path": "/content/dam/visualsearch",
+    "web_service_url_insert": "https://mysterio.codeland.it/insert_asset",
+    "web_service_url_get": "https://mysterio.codeland.it/get_nearest_neighbors",
+    "web_service_url_temporary_search": "https://mysterio.codeland.it/get_temporary_neighbors",
+    "username": "golem",
+    "password": "washere"
+}
+

@@ -1,0 +1,47 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd">
+	<localRepository>/home/me/.m2/repository</localRepository>
+
+	<profiles>
+		<profile>
+			<id>codeland</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<repositories>
+				<repository>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+					<id>central-codeland</id>
+					<name>asc-visual-search-addon-releases</name>
+					<url>https://artifactory.codeland.it:443/artifactory/asc-visual-search-addon</url>
+				</repository>
+				<repository>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
+					<id>snapshots-codeland</id>
+					<name>asc-visual-search-addon-snapshots</name>
+					<url>https://artifactory.codeland.it:443/artifactory/asc-visual-search-addon</url>
+				</repository>
+			</repositories>
+
+		</profile>
+	</profiles>
+
+	<servers>
+		<server>
+			<username>${UPLOAD_ARTIFACTORY_USER}</username>
+			<password>${UPLOAD_ARTIFACTORY_PASSWORD}</password>
+			<id>central-codeland</id>
+		</server>
+		<server>
+			<username>${UPLOAD_ARTIFACTORY_USER}</username>
+			<password>${UPLOAD_ARTIFACTORY_PASSWORD}</password>
+			<id>snapshots-codeland</id>
+		</server>
+	</servers>
+
+</settings>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/asc-visual-search-addon/clientlibs"/>
+    <filter root="/apps/asc-visual-search-addon/components"/>
+    <filter root="/apps/asc-visual-search-addon/i18n"/>
+</workspaceFilter>

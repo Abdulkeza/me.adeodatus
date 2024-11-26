@@ -1,0 +1,6 @@
+#base=js
+
+cart.js
+cart-actions.js
+image-gallery-cmp.js
+text-search.js

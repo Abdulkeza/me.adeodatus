@@ -1,0 +1,6 @@
+{
+  "mobile.resourceTypes": [
+    "asc-visual-search-addon/components/page"
+  ],
+  "README": "Indicate which page resource types should display the mobile emulators."
+}

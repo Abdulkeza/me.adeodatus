@@ -1,0 +1,7 @@
+{
+    "scripts": [
+        "create path (sling:OrderedFolder) /content/dam/asc-visual-search-addon",
+        "create path (nt:unstructured) /content/dam/asc-visual-search-addon/jcr:content",
+        "set properties on /content/dam/asc-visual-search-addon/jcr:content\n  set cq:conf{String} to /conf/asc-visual-search-addon\n  set jcr:title{String} to \"Asset Share Commons Visual Search Add-On\"\nend"
+    ]
+}
